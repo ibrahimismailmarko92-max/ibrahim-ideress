@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إبراهيم إدريس — صوت الرحّل وأغاني أهل البادية</title>
+<meta name="description" content="أرشيف فني للفنان إبراهيم إدريس، صوت تراث البادية بغرب السودان">
+<link rel="icon" href="assets/images/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="hero">
+  <img src="assets/images/photo_hero.jpg" alt="إبراهيم إدريس" class="hero-img">
+  <div class="hero-fade"></div>
+  <div class="hero-text">
+    <div class="hero-kicker">
+      <span>فنان تراث البادية · غرب السودان</span>
+      <i class="diamond"></i>
+    </div>
+    <h1>إبراهيم إدريس</h1>
+    <p class="hero-sub">صوت الرحّل وأغاني أهل البادية</p>
+  </div>
+</div>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-tab="bio" role="tab" aria-selected="true">السيرة الذاتية</button>
+  <button class="tab" data-tab="songs" role="tab" aria-selected="false">الأغاني</button>
+</nav>
+
+<main>
+
+  <section id="bio" class="panel active">
+
+    <article class="bio-block">
+      <h2><i class="diamond small"></i> من هو</h2>
+      <p>فنان شعبي حمل في صوته تراث البادية بغرب السودان، ونقل من خلال أغانيه تفاصيل حياة الرُّحّل وأهل البدو وأهل الناقة والبقرة؛ الرحلة، الناقة، الفرقان، والشوق. صوته صار من أكثر الأصوات ارتباطاً بهذا اللون الغنائي في السنوات الأخيرة.</p>
+    </article>
+
+    <article class="bio-block">
+      <h2><i class="diamond small"></i> البدايات</h2>
+      <p>برز الفنان قبل نحو عقدين من الزمن كفنان شعبي في مدينة الجنينة بغرب السودان، قبل أن ينتشر صوته وأعماله داخل السودان وفي الدول المجاورة، حاملاً معه إيقاعات وألحان أهل البادية.</p>
+    </article>
+
+    <article class="bio-block">
+      <h2><i class="diamond small"></i> الأثر</h2>
+      <p>وثّقت أعماله أنماطاً من الغناء والإيقاع المرتبط بتراث غرب السودان (منها ما يُعرف محلياً بالإيقاع الجنيدي)، وأسهمت في حفظ هذا الموروث الشفهي ونقله لجيل جديد لم يعاصر حياة البادية القديمة عن قرب.</p>
+    </article>
+
+    <div class="note-box">
+      <p>بحسب ما تناقلته مصادر إعلامية محلية، تُوفي الفنان إبراهيم إدريس في ديسمبر ٢٠٢٥ إثر غارة جوية طالت منطقة هجليج بولاية غرب كردفان، تاركاً إرثاً فنياً من أغاني التراث يستحق الحفظ والتوثيق. هذا الموقع محاولة متواضعة لأرشفة هذا الإرث وإتاحته للأجيال القادمة.</p>
+    </div>
+
+    <div class="note-box">
+      <p>وبحسب ما تناقلته مصادر إعلامية، لم يكتفِ الفنان إبراهيم إدريس بنقل معاناة أهل البادية وتهميشهم من قبل الحكومات المتعاقبة عبر صوته فقط، بل شارك مدافعاً عن مجتمعه في حرب 15 أبريل 2023 بصوته وجسده ودمه وروحه، واستُشهد وهو يدافع عن أهله ومجتمعه.</p>
+    </div>
+
+  </section>
+
+  <section id="songs" class="panel">
+    <h2 class="songs-title">الأرشيف الصوتي</h2>
+    <p class="songs-sub">مجموعة من أغاني الفنان، محفوظة ومتاحة للاستماع مباشرة من الموقع.</p>
+    <div class="song-list" id="songList"></div>
+  </section>
+
+</main>
+
+<div class="mini-player" id="miniPlayer">
+  <div class="mp-progress-row">
+    <span class="mp-time" id="mpCurrent">0:00</span>
+    <div class="mp-bar" id="mpBar"><div class="mp-bar-fill" id="mpBarFill"></div></div>
+    <span class="mp-time" id="mpDuration">0:00</span>
+  </div>
+  <div class="mp-controls-row">
+    <button class="mp-play-btn" id="mpPlayBtn" aria-label="تشغيل/إيقاف">
+      <svg id="mpPlayIcon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+      <svg id="mpPauseIcon" viewBox="0 0 24 24" width="20" height="20" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <div class="mp-info">
+      <div class="mp-song-title" id="mpTitle"></div>
+      <div class="mp-artist">إبراهيم إدريس</div>
+    </div>
+  </div>
+</div>
+
+<audio id="audioPlayer"></audio>
+
+<script src="js/app.js"></script>
+</body>
+</html>
