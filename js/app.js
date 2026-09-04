@@ -71,6 +71,13 @@ function renderSongs(){
         <div class="song-title">${song.title}</div>
         <div class="song-sub">${song.sub}</div>
       </div>
+      <a class="song-download-btn" href="${song.file}" download aria-label="تنزيل">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v11"/>
+          <path d="M8 10l4 4 4-4"/>
+          <path d="M5 19h14"/>
+        </svg>
+      </a>
     `;
     item.querySelector('.song-play-btn').addEventListener('click', () => playSong(index));
     songListEl.appendChild(item);

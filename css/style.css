@@ -14,6 +14,26 @@ html,body{
   color:var(--cream);
   font-family:'Tajawal',sans-serif;
   min-height:100%;
+  position:relative;
+}
+
+.bg-heritage{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  background-image:
+    linear-gradient(rgba(30,42,68,0.88), rgba(21,31,51,0.93)),
+    url('../assets/images/bedouin-bg.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  pointer-events:none;
+}
+
+.hero, .tabs, main, .mini-player{
+  position:relative;
+  z-index:1;
 }
 
 body{
@@ -82,7 +102,8 @@ body{
   display:flex;
   gap:28px;
   padding:0 24px;
-  background:var(--night);
+  background:rgba(21,31,51,0.55);
+  backdrop-filter:blur(6px);
   border-bottom:1px solid rgba(243,236,223,0.08);
   position:sticky;
   top:0;
@@ -202,6 +223,21 @@ main{
   transition:transform .1s ease;
 }
 .song-play-btn:hover{transform:scale(1.05)}
+.song-download-btn{
+  width:36px;height:36px;
+  min-width:36px;
+  border-radius:50%;
+  background:rgba(243,236,223,0.08);
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:var(--gold);
+  text-decoration:none;
+  transition:background .15s ease;
+}
+.song-download-btn:hover{background:rgba(201,162,39,0.2)}
 .song-meta{
   flex:1;
   text-align:right;
